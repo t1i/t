@@ -45,7 +45,7 @@
         "headline": "${title.innerText}",
         "description": "${description.content}",
         "image": "${image.content}",
-        "keywords": ["${keywords.content.replase(/,/g,`","`)}"],
+        "keywords": ["${keywords.content.replace(/,/g,`","`)}"],
         "articleBody" : "${main.innerText}",
         "articleSection" : "${main.innerText}",
         "url" : "${url.href}",
