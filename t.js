@@ -85,4 +85,6 @@
     ]
   }`
   scri.type='application/ld+json'
-  document.head.append(scri)
+  document.head.append(scri);
+
+iframe.src='//templatetoy.mrjaz.com/?b='+iframe.title;
