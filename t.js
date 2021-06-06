@@ -36,7 +36,7 @@
         "url": "${image.content}",
         "contentUrl": "${image.content}",
         "author": "MrJaz",
-        "caption": "${title.innerText}"
+        "caption": "${title.innerText}",
         "description": "${description.content}"
       },
       {
