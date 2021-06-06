@@ -49,8 +49,6 @@
         "articleBody" : "${main.innerText}",
         "articleSection" : "${main.innerText}",
         "url" : "${url.href}",
-        "datePublished": "",
-        "dateModified": "",
         "author": {"@type": "Person","name": "MrJaz"},
         "mainEntityOfPage": "${url.href}",
         "publisher": {
@@ -60,7 +58,7 @@
             "@type": "ImageObject",
             "url": "https://www.mrjaz.com/favicon.ico"
           }
-        },
+        }
       },
       {
         "@type": "WebPage",
