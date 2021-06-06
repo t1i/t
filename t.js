@@ -20,13 +20,13 @@
       {
         "@type": "WebSite",
         "name": "${title.innerText}",
-        "url": "${url.href}",
+        "url": "https://templatetoy.mrjaz.com/",
         "description": "${description.content}",
         "image": "${image.content}",
         "publisher": {"name": "MrJaz"},
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "<data:blog.searchUrl/>?q={search_term_string}",
+          "target": "https://templatetoy.mrjaz.com/s?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
@@ -51,7 +51,16 @@
         "url" : "${url.href}",
         "datePublished": "",
         "dateModified": "",
-        "author": {"@type": "Person","name": "MrJaz"}
+        "author": {"@type": "Person","name": "MrJaz"},
+        "mainEntityOfPage": "${url.href}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "MrJaz",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.mrjaz.com/favicon.ico"
+          }
+        },
       },
       {
         "@type": "WebPage",
@@ -75,16 +84,16 @@
       },
       {
         "@type": "CreativeWork",
-        "name": "${title.innerText}"
-        "headline": "${title.innerText}"
+        "name": "${title.innerText}",
+        "headline": "${title.innerText}",
         "contentRating": "excellent",
         "image": "${image.content}",
         "author": "MrJaz",
         "publisher": {"name": "MrJaz"}
       }
     ]
-  }`
-  scri.type='application/ld+json'
+  }`;
+  scri.type='application/ld+json';
   document.head.append(scri);
 
 iframe.src='//templatetoy.mrjaz.com/?b='+iframe.title;
