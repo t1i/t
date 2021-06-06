@@ -54,10 +54,7 @@
         "publisher": {
           "@type": "Organization",
           "name": "MrJaz",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.mrjaz.com/favicon.ico"
-          }
+          "logo": "https://www.mrjaz.com/favicon.ico"
         }
       },
       {
