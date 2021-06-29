@@ -1,6 +1,6 @@
- let scri=document.createElement('script');
-  scri.text=`
-
+history.replaceState({},'',location.href.replace(/.?m=1/g,''))
+  let scpt=document.createElement('script');
+  scpt.text=`
   {
     "@context": "https://schema.org",
     "@graph":[
@@ -11,10 +11,11 @@
         "url": "https://www.mrjaz.com/",
         "logo": "https://www.mrjaz.com/favicon.ico",
         "image": "https://www.mrjaz.com/favicon.ico",
-        "description": "",
+        "description": "${title.innerText}",
         "sameAs": [
           "https://www.mrjaz.com/",
-          "https://www.am2z.com/"
+          "https://www.am2z.com/",
+          "https://templatetoy.mrjaz.com/"
         ]
       },
       {
@@ -45,16 +46,15 @@
         "headline": "${title.innerText}",
         "description": "${description.content}",
         "image": "${image.content}",
-        "keywords": ["${keywords.content.replace(/,/g,`","`)}"],
+        "keywords": ["${title.innerText}","${keywords.content.replace(/,/g,`","`)}"],
         "articleBody" : "${main.innerText}",
         "articleSection" : "${main.innerText}",
         "url" : "${url.href}",
         "author": {"@type": "Person","name": "MrJaz"},
         "mainEntityOfPage": "${url.href}",
-        "publisher": {
-          "@type": "Organization",
-          "name": "MrJaz",
-          "logo": "https://www.mrjaz.com/favicon.ico"
+        "datePublished": "",
+        "dateModified": "",
+        "publisher": {"@type": "Organization","name": "MrJaz","logo": "https://www.mrjaz.com/favicon.ico"
         }
       },
       {
@@ -88,7 +88,6 @@
       }
     ]
   }`;
-  scri.type='application/ld+json';
-  document.head.append(scri);
-
-iframe.src='//templatetoy.mrjaz.com/?b='+iframe.title;
+  scpt.type='application/ld+json';
+  document.head.append(scpt);
+  iframe.src='//templatetoy.mrjaz.com/2021/?b='+iframe.title;
