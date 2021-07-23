@@ -74,7 +74,8 @@ history.replaceState({},'',location.href.replace(/.?m=1/g,''))
         "aggregateRating":{
           "@type":"AggregateRating",
           "ratingValue":"5",
-          "ratingCount":"69"
+          "bestRating": "5",
+          "ratingCount":"696"
         }
       },
       {
