@@ -1,4 +1,4 @@
-history.replaceState({},'',location.href.replace(/.?m=1/g,''))
+// history.replaceState({},'',location.href.replace(/.?m=1/g,''))
   let scpt=document.createElement('script');
   scpt.text=`
   {
